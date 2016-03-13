@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> </title>
+</head>
+
+<body>
+<form>
+请输入颜色编码：
+<input type="text" name="color" />
+<input type="button" value="修改颜色" />
+</form>
+<script language="javascript">
+function change(form)
+{
+	/*未输入颜色编码，弹出提示框*/
+	if(form.text.value=="")
+	alert("你喜欢的颜色是?：");
+	/*按照输入颜色编码修改背景颜色*/
+	else
+	{
+		document.bgColor=("" +form.text.value+"");
+	}
+}
+</script>
+
+<canvas id="myCanvas" width="1024" height="768" color="blue"/>
+/*对比颜色块*/
+/*设置对比颜色块*/
+<script type="text/javascript">
+	var c =document.getElementById("myCanvas");
+	var cxt=c.getContext("2d");
+	cxt.fillStyle="green";
+	cxt.fillRect(0,0,150,75);
+</script>
+</body>
+</html>
