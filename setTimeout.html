@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>考试倒计时</title>
+</head>
+
+<body>
+时：<input type="text" id="h" />
+分：<input type="text" id="m" />
+秒：<input type="text" id="s"  value="2"/>
+<input type="button" onclick="show_date_time()" value="开始计时!" />
+<input type="button" onClick="stopCount()" value="停止计时！" />
+<script>
+	var t	
+	/*倒计时函数*/
+	function stopCount()
+	{
+		clearTimeout(t)
+	}
+	function show_date_time()
+	{
+		var h=document.getElementById("h")
+		var m=document.getElementById("m")
+		var s=document.getElementById("s")
+			/*每隔指定的时间就执行一次表达式*/
+			t=setTimeout("show_date_time()",1000)
+
+			s.value=s.value-1
+			if(s.value<=0)
+			{
+				if(m.value>=1)
+				{
+					m.value=m.value-1;
+					s.value=59;
+				}
+				else
+				{
+					s.value=0
+				}
+			}
+			if(m.value<=0)
+			{
+				if(h.value>=1)
+				{
+					h.value=h.value-1
+					m.value=59
+				}
+				else
+				{
+					m.value=0
+				}
+			}
+			if(h.value<=0)
+			{
+				h.value=0
+			}
+			if(h.value<=0&&m.value<=0&&s.value<=0)
+			{
+				stopCount()
+				alert('您的答题时间到了，系统自动交卷')
+			}
+	}
+	
+	
+	
+</script>
+</body>
+</html>
