@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> </title>
+</head>
+
+<body>
+<canvas id="myCanvas" width="1366" height=768" style="border:1px solid #d3d3d3" >
+</canvas>
+<script type="text/javascript">
+	var c= document.getElementById("myCanvas")
+	var cxt=c.getContext("2d")
+	cxt.fillRect(20,20,20,20)
+	cxt.strokeRect(20,20,1300,570)
+    var x=20,y=20
+    function go()
+    {	
+    	cxt.clearRect(20,20,1300,570)
+    	cxt.fillRect(x,y,20,20)
+        setTimeout("go()",1)
+        
+    }
+    function moveRight()
+    {
+    	x++
+    }
+    
+    function moveDown()
+    {
+    	y++
+    }
+    
+    function moveUp()
+    {
+    	y--
+    }
+    function moveLeft()
+    {
+    	x--
+    }
+    go()
+    
+</script>
+
+</body>
+</html>
