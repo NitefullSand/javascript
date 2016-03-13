@@ -14,32 +14,87 @@
 	cxt.fillRect(20,20,20,20)
 	cxt.strokeRect(20,20,1300,570)
     var x=20,y=20
+    var d=2
     function go()
     {	
     	cxt.clearRect(20,20,1300,570)
     	cxt.fillRect(x,y,20,20)
         setTimeout("go()",1)
         
-    }
-    function moveRight()
-    {
-    	x++
+        
+       if(d==2)
+        {
+        	x++
+        }
+       if(d==3)
+        {
+        	y++
+        }
+       if(d==0)
+        {
+        	x--
+        }
+       if(d==1)
+        {
+        	y--
+        }
+        
+        
+       if(x>1300)
+        {
+        	x=20
+        }
+       if(y>570)
+        {
+        	y=20
+        }
+       if(x<20)
+        {
+        	x=1300
+        }
+       if(y<20)
+        {
+        	y=570
+        }
     }
     
-    function moveDown()
+function moveRight()
     {
-    	y++
+    	d=2
     }
     
-    function moveUp()
+function moveDown()
     {
-    	y--
+    	d=3
     }
-    function moveLeft()
+    
+function moveUp()
     {
-    	x--
+    	d=1
+    }
+function moveLeft()
+    {
+    	d=0
     }
     go()
+    
+document.onkeydown=KeyDown
+
+//方向
+function KeyDown() {
+Key=event.keyCode
+	switch(Key) {
+		case 37:
+  			moveLeft();break;	//左方向键
+		case 39:
+			moveRight();break;		//右方向键
+		case 38:
+			moveUp();break;	//上方向键
+		case 40:
+			moveDown();break;		//下方向键
+	}
+	return false
+}
     
 </script>
 
