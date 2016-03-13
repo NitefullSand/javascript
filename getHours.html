@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>获取当前小时</title>
+</head>
+
+<body>
+<script>
+	now = new Date()
+	/*获取当前小时*/
+	hour=now.getHours() 
+	if(hour<6)
+	{
+		document.write("凌晨好！还是休息时间啊.")
+	}
+	else if(hour<9)
+	{
+		document.write("早上好！昨晚睡得好吗？")
+	}
+	else if(hour<12)
+	{
+		document.write("上午好！又是新的一天")
+	}
+	else if(hour<14)
+	{
+		document.write("中午好！吃过饭了吗？")
+	}
+	else if(hour <17)
+	{
+		document.write("下午好！可别打瞌睡哦.")
+	}
+	else if(hour<19)
+	{
+		document.write("傍晚好!今天的工作完成了吗？")
+	}
+	else if(hour<22)
+	{
+		document.write("晚上好！在上网吗?")
+	}
+	else
+	{
+		document.write("夜里好！注意身体，别太晚了.")
+	}
+		
+		
+	
+</script>
+
+
+</body>
+</html>
