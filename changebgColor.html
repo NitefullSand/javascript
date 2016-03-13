@@ -6,22 +6,30 @@
 </head>
 
 <body>
-<form>
 请输入颜色编码：
-<input type="text" name="color" />
-<input type="button" value="修改颜色" />
-</form>
+<input id="form" type="text" name="color" />
+<input type="button" value="修改颜色" onclick="change()" />
+<input type="button" value="自动修改颜色" onclick="autoChangeColor()" />
 <script language="javascript">
-function change(form)
+function change()
 {
 	/*未输入颜色编码，弹出提示框*/
-	if(form.text.value=="")
+	if(form.value=="")
 	alert("你喜欢的颜色是?：");
 	/*按照输入颜色编码修改背景颜色*/
 	else
 	{
-		document.bgColor=("" +form.text.value+"");
+		document.bgColor=("" +form.value+"");
 	}
+}
+var r=0,g=0,b=0;
+function autoChangeColor()
+{
+	r = Math.random()*255;
+	g = Math.random()*255;
+	b = Math.random()*255;
+	document.bgColor=(""+ r +""+ g +""+ b +"");
+	setTimeout("autoChangeColor()",1000);
 }
 </script>
 
