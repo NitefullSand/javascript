@@ -12,31 +12,43 @@
 	var c= document.getElementById("myCanvas")
 	var cxt=c.getContext("2d")
 	cxt.fillRect(20,20,20,20)
-	cxt.strokeRect(20,20,1300,570)
+	cxt.strokeRect(20,20,1300,560)
     var x=20,y=20
     var d=2
+    var foodX=30,foodY=30
     function go()
     {	
-    	cxt.clearRect(20,20,1300,570)
+    	console.log(x+" "+y)
+    	cxt.clearRect(20,20,1300,560)
+        cxt.fillStyle="red"
     	cxt.fillRect(x,y,20,20)
-        setTimeout("go()",1)
-        
+        setTimeout("go()",500)
+        cxt.beginPath();
+        cxt.arc(foodX,foodY,10,0,2*Math.PI)
+        cxt.closePath();
+        cxt.fillStyle="green";
+        cxt.fill()
+        if(x+10==foodX&&y+10==foodY)
+        {
+        	foodX=parseInt((Math.random()*1300/20))*20+30
+            foodY=parseInt((Math.random()*560/20))*20+30
+        }
         
        if(d==2)
         {
-        	x++
+        	x=x+20
         }
        if(d==3)
         {
-        	y++
+        	y=y+20
         }
        if(d==0)
         {
-        	x--
+        	x-=20
         }
        if(d==1)
         {
-        	y--
+        	y-=20
         }
         
         
@@ -44,7 +56,7 @@
         {
         	x=20
         }
-       if(y>570)
+       if(y>560)
         {
         	y=20
         }
@@ -54,7 +66,7 @@
         }
        if(y<20)
         {
-        	y=570
+        	y=560
         }
     }
     
@@ -95,7 +107,6 @@ Key=event.keyCode
 	}
 	return false
 }
-    
 </script>
 
 </body>
