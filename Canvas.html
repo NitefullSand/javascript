@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>画板</title>
+</head>
+
+<body>
+	<canvas id="myCanvas" width="1300" height="700" style="border:1px solid blue;" onmousedown="mousedown()" onmousemove="mousemove()" onmouseup="mouseup()" > 
+    </canvas>
+<script>
+	var beginx=0,beginy=0,movex=0,movey=0;
+	var ismouseDown=false;
+	var c = document.getElementById("myCanvas");
+	var cxt = c.getContext("2d");
+	cxt.lineWidth=5;
+	cxt.strokeStyle="purple";
+	function mousedown()
+	{
+		beginx=event.clientX;//获取当前鼠标坐标
+		beginy=event.clientY;
+		cxt.moveTo(beginx,beginy);
+		ismouseDown=true;
+		
+	}
+	function mouseup()
+	{
+		ismouseDown=false;
+	}
+	function mousemove()
+	{	
+		if(ismouseDown==true)
+		{
+			movex=event.clientX;
+			movey=event.clientY;
+			cxt.lineTo(movex,movey);
+			cxt.stroke();
+		}
+		
+	}
+	
+
+</script>
+</body>
+</html>
