@@ -9,28 +9,35 @@
 <canvas id="myCanvas" width="1366" height=768" style="border:1px solid #d3d3d3" >
 </canvas>
 <script type="text/javascript">
-	var c= document.getElementById("myCanvas")
+	var c=document.getElementById("myCanvas")
 	var cxt=c.getContext("2d")
-	cxt.fillRect(20,20,20,20)
-	cxt.strokeRect(20,20,1300,560)
-    var x=20,y=20
+	cxt.fillRect(20,20,20,20)//绘制“已填色”的矩形。默认的填充颜色是黑色
+	cxt.strokeRect(20,20,1300,560)//绘制矩形（无填充）。笔触的默认颜色是黑色
+    var x=1300,y=20
     var d=2
     var foodX=30,foodY=30
+    var body=new Array()//声明数组存储蛇的身体坐标
+    body.push({px:x,py:y})//蛇的头部坐标
     function go()
     {	
-    	console.log(x+" "+y)
-    	cxt.clearRect(20,20,1300,560)
+    	
+    	cxt.clearRect(20,20,1300,560)//清空一个区域的矩形范围
         cxt.fillStyle="red"
-    	cxt.fillRect(x,y,20,20)
+        for(var i=0;i<body.length;i++)//遍历蛇身，画出蛇的每个节点
+        {
+            cxt.fillRect(body[i].px,body[i].py,20,20)
+        }
+        
         setTimeout("go()",500)
-        cxt.beginPath();
+        cxt.beginPath();//画圆形
         cxt.arc(foodX,foodY,10,0,2*Math.PI)
         cxt.closePath();
         cxt.fillStyle="green";
         cxt.fill()
         if(x+10==foodX&&y+10==foodY)
-        {
-        	foodX=parseInt((Math.random()*1300/20))*20+30
+        {	
+        	body.unshift({px:x,py:y})//在头部添加一个新节点
+        	foodX=parseInt((Math.random()*1300/20))*20+30//食物出现
             foodY=parseInt((Math.random()*560/20))*20+30
         }
         
@@ -52,6 +59,7 @@
         }
         
         
+        
        if(x>1300)
         {
         	x=20
@@ -68,7 +76,10 @@
         {
         	y=560
         }
+        body.unshift({px:x,py:y})//添加蛇头
+        body.pop()//删除蛇尾节点
     }
+    
     
 function moveRight()
     {
