@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一个表单</title>
+<link href="form.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="form.js"></script>
+</head>
+
+<body>
+<form  name="input" action="html_form_action.asp" method="post">
+<table width="800" border="1" >
+<div class="news1">
+	<tr>
+    	<td align="center">用户信息</td>
+    </tr>
+</div>
+<div class="news2">
+    <tr>
+        <td>用户名:&nbsp
+        <input type="text" name="name" value="" />
+        </td>
+    </tr>
+</div>
+<div class="news3">
+    <tr>
+        <td>密码&nbsp:&nbsp
+        <input type="text" name="name" value="" />
+        </td>
+    </tr>
+</div>
+<div class="news4">
+    <tr>
+        <td>性别&nbsp:&nbsp
+        男：
+        <input type="radio" checked="checked" name="Sex" value="male" />
+        女：
+        <input type="radio" name="Sex" value="female" />
+        </td>
+     </tr>
+<div class="news4">
+  	<tr>
+        <td>爱好&nbsp:&nbsp
+        运动
+        <input type="checkbox" name="sports"/>
+        音乐
+        <input type="checkbox" name="music"/>
+        上网
+        <input type="checkbox" name="internet"/>
+        看书
+        <input type="checkbox" name="reading"/>
+        打代码
+        <input type="checkbox" name="coding"/>
+        <td>
+    </tr>
+</div>
+<div class="news5">
+	<tr>
+        <td>出生省份：
+        <select name="country">
+        <option value="吉林">吉林</option>
+        <option value="黑龙江">黑龙江</option>
+        <option value="辽宁">辽宁</option>
+        <option value="江西">江西</option>
+        <option value="江苏">江苏</option>
+        <option value="河北">河北</option>
+        </select>
+        </td>
+    </tr>
+</div>
+<div class="news6">
+    <tr>
+        <td>出生日期：
+        <input type="date" />
+        </td>
+    </tr>
+</div>
+<div class="news7">
+    <tr>
+    <td>个人简介：
+    <textarea cols="40" rows="2">
+    </textarea>
+    </td>
+    </tr>
+</div>
+<div class="news8">
+    <tr>
+        <td>友情链接:
+        <select name="link" id="rt1">
+        <option value="新浪">新浪</option>
+        <option value="w3cschool">w3cschool</option>
+        <option value="贴吧" selected="selected">贴吧</option>
+        <option value="百度云">百度云</option>
+        </select>
+        <input type="button" onclick="fz()" value="前往" />
+        </td>
+    </tr>
+</div>
+<div class="news9">
+    <tr>
+        <td align="center">
+        <input type="submit" name="submit" value="提交" />
+        <input type="reset" name="resetting" value="重置" />
+        </td>
+    </tr>
+</div>
+</table>
+</form>
+</body>
+</html>
