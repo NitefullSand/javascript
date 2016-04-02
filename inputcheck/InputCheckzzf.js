@@ -1,6 +1,8 @@
 // JavaScript Document
+
 //错误或提示消息
-var errorMessage ;
+var errorMessage = "";
+
 //检查长度是否够6位
 function isLengthThanSix(input)
 {	
@@ -10,7 +12,7 @@ function isLengthThanSix(input)
 	}
 	return false;
 }
-//alert (isLengthThanSix("111111"));
+
 //检查是否为空
 function isNull(input)
 {
@@ -20,22 +22,19 @@ function isNull(input)
 	}
 	return false;
 }
-//alert (isNull(undefined));
+
 //检查是否是合法的邮箱地址
-function isEmailAddress(input)    
-{    
- var email = obj.email.value;    
- var pattern =/^([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/gi;   
- var isOk = pattern.test(email);    
- if(isOk)    
- {    
-  return true;    
- }    
- else    
- {    
-  return false;    
- }    
+function isEmailAddress(input)
+{
+    var pattern = /^([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/gi;
+    var isOk = pattern.test(input);
+    if(isOk)
+    {
+      return true;
+    }
+    return false;
 }
+
 //检查邮箱地址
 function checkEmail(input) {
     if(isNull(input)){
