@@ -1,3 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
+#center{
+	width:80%;
+	margin: 0 auto;
+}
+#center_nav{
+	width: 100%;
+	text-align: center;
+}
+#center_nav ul {
+	width: 100%;
+}
 
+#center_nav ul li {
+	width: 48%;	
+}

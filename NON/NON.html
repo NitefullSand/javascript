@@ -13,78 +13,83 @@
 body{background:#33CCF5;
 }
 </style>
-<div class="dropdown">
-   <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
-      data-toggle="dropdown">
-      NON
-      <span class="caret"></span>
-   </button>
-   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-      <li role="presentation">
-         <a role="menuitem" tabindex="-1" href="#">Java</a>
-      </li>
-      <li role="presentation">
-         <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
-      </li>
-      <li role="presentation">
-         <a role="menuitem" tabindex="-1" href="#">
-            数据通信/网络
-         </a>
-      </li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation">
-         <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
-      </li>
-   </ul>  
+<div id="center">
+	<div id="center_footer">
+		<div class="dropdown">
+           <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
+              data-toggle="dropdown">
+              NON
+              <span class="caret"></span>
+           </button>
+           <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation">
+                 <a role="menuitem" tabindex="-1" href="#">Java</a>
+              </li>
+              <li role="presentation">
+                 <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+              </li>
+              <li role="presentation">
+                 <a role="menuitem" tabindex="-1" href="#">
+                    数据通信/网络
+                 </a>
+              </li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation">
+                 <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+              </li>
+           </ul>  
+      </div>
+        <div class="Message">
+            <img src="短信.png"  />
+                <style type="text/css">
+                .Message
+               {
+                   position:relative;
+                    left:300px;
+                    top:-30px;
+               }
+               </style>
+	   </div>
+	</div>
+<div id="center_nav">
+    <ul class="nav nav-pills">
+        <li><a href="#">背单词 <span class="badge">3</span></a></li>
+        <li class="active"><a href="#">玩社交<span class="badge">42</span></a></li>
+    </ul>
+    <hr />
 </div>
-<div class="Message">
-    <img src="短信.png"  />
-        <style type="text/css">
-        .Message
-       {
-           position:relative;
-            left:20%;
-            top:-30px;
-       }
-       </style>
+    <div id="topic_1">
+        <img src="head1.png" width："50" height="40" />
+        小明 19:20<br />
+        <h5>If you think you are beaten,you are;</h5>
+        <h5>If you think you dare not,you don't;</h5>
+        <h5>If you want to win but think you can't;</h5>
+        <h5>It's almost a cinch you won't.<button type="button" class="btn btn-primary" data-toggle="collapse" 
+           data-target="#demo">
+          ....
+        </button>
+        </h5>
+        <ol class="breadcrumb">
+          <li><a href="#">Comments(20)</a></li>
+          <li><a href="#">upvote(56)</a></li>
+          <li><a href="#">Share More</a></li>
+        </ol>
+    </div>
+    <div id="topic_2">
+        <img src="head2.png" width："50" height="40" />
+        NON团队 6-6,2015<br />
+        <h5>Welcome to the new world!<button type="button" class="btn btn-primary" data-toggle="collapse" 
+           data-target="#demo">
+          ....
+        </button>
+        </h5>
+        <ol class="breadcrumb">
+          <li><a href="#">Comments(56)</a></li>
+          <li><a href="#">upvote(89)</a></li>
+          <li><a href="#">Share More</a></li>
+        </ol>
+    </div>
 </div>
-<ul class="nav nav-pills">
-	<li><a href="#">背单词 <span class="badge">3</span></a></li>
-    <li class="active"><a href="#">玩社交<span class="badge">42</span></a></li>
-</ul>
-<hr />
-<div class="a">
-    <img src="head1.png" width："50" height="40" />
-    小明 19:20<br />
-    <h5>If you think you are beaten,you are;</h5>
-    <h5>If you think you dare not,you don't;</h5>
-    <h5>If you want to win but think you can't;</h5>
-    <h5>It's almost a cinch you won't.<button type="button" class="btn btn-primary" data-toggle="collapse" 
-       data-target="#demo">
-      ....
-    </button>
-    </h5>
-    <ol class="breadcrumb">
-      <li><a href="#">Comments(20)</a></li>
-      <li><a href="#">upvote(56)</a></li>
-      <li><a href="#">Share More</a></li>
-    </ol>
-</div>
-<div class="b">
-    <img src="head2.png" width："50" height="40" />
-    NON团队 6-6,2015<br />
-    <h5>Welcome to the new world!<button type="button" class="btn btn-primary" data-toggle="collapse" 
-       data-target="#demo">
-      ....
-    </button>
-    </h5>
-    <ol class="breadcrumb">
-      <li><a href="#">Comments(56)</a></li>
-      <li><a href="#">upvote(89)</a></li>
-      <li><a href="#">Share More</a></li>
-    </ol>
-</div>
-</
 <!--<script type="text/javascript">
        var phoneWidth =  parseInt(window.screen.width);
         var phoneScale = phoneWidth/640;
