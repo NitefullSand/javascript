@@ -13,5 +13,34 @@
 }
 
 #center_nav ul li {
-	width: 48%;	
+	width:50%;
+	margin-left:0;
+}
+#Message{
+	position:relative;
+	left:95%;
+	top:-30px;
+}
+#SHU{
+	width:50%;
+	height:1%;
+}
+#PQ{
+	margin-top:1%;
+}
+#id{
+	background:#FFF;
+	word-wrap: break-word;
+	width:100%;
+}
+
+.comment{
+	width:80%;
+	margin:auto;
+}
+.comment_content {
+	margin-left:7%;
+}
+.comment_time{
+	margin-left:7%;
 }

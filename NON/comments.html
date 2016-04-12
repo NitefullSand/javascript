@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="comments.css" rel="stylesheet" type="text/css" />
+  <script type='text/javascript'>
+function showHidden(){
+var dis=document.getElementById('id');
+if(dis.style.display=='none'){
+document.getElementById('a').innerHTML="隐藏输入框";
+dis.style.display="";
+}else{
+document.getElementById('a').innerHTML="显示输入框";
+dis.style.display="none";
+}
+}
+</script>
+</head>
+
+<body>
+
+<span style="display:none;" id='id' >
+输入框：<textarea  rows="10" cols="4"></textarea>
+</span>
+<a id="a" href='###' onclick="showHidden()">显示输入框</a>
+</body>
+</html>
